@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #fff5f7, #ffeef5);
+  color: #444;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* biar full tinggi layar */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Biar tombol ada bayangan manis */
+button, .landing-btn {
+  box-shadow: 0px 4px 10px rgba(255, 105, 180, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover, .landing-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(255, 105, 180, 0.4);
+}
+
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* === Notice Section === */
+.notice p {
+  margin: 5px 0;
+}
+
+.notice button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: linear-gradient(135deg, #ffadc6, #ff87ab);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.notice button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff87ab, #ffadc6);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* === Main Photo === */
+
+.main-photo img {
+  width: 990px;
+  transition: transform 0.4s ease;
+  margin-left: -20px;
+}
+
+.caption {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d63384;
+}
+
+/* === Love Section === */
+.love-section {
+  margin-top: 40px;
+}
+
+.love-section h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #d63384;
+}
+
+.love-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* 1fr supaya lebar kolom sama */
+  gap: 15px;
+  margin-top: 20px;
+
+  /* PENTING untuk menyamakan tinggi items di tiap row */
+  align-items: stretch;
+  grid-auto-rows: 1fr;
+}
+
+.card {
+  height: 100%;               /* isi penuh track grid */
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 12px;
+  background: #ffe4ec;
+  display: flex;              /* agar isi bisa center vert/horiz */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* reset margin default pada teks di dalam card agar tidak bikin perbedaan */
+.card > * {
+  margin: 0;
+}
+
+
+.card:hover { /* === gaguna === */
+  background: #e1749d;
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(242, 183, 225, 0.2);
+}
+
+/* === Favorite Moments === */
+.moments {
+  margin-top: 40px;
+}
+
+.moments h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ff4d88;
+}
+
+.moment-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* SELALU 4 kolom */
+  gap: 20px;
+  justify-items: center;
+}
+
+.moment {
+  width: 155px; /* sama semua */
+  text-align: center;
+}
+
+.moment img {
+  width: 100%;          /* biar ikut lebar parent */
+  height: 200px;        /* tinggi fix sama semua */
+  object-fit: cover;    /* crop rapi tanpa distorsi */
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+
+.moment:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.moment img:hover {
+  transform: scale(1.08);
+}
+
+.moment p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #ff4d88;
+}
+
+.music-card {
+  display: flex;
+  align-items: center;
+  background: #b23b3b;
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  width: 280px;
+  margin: 5px auto 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  overflow: hidden; /* Tambahkan baris ini */
+}
+
+.music-card img.cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-right: 27px;
+  object-fit: cover;
+  position: relative; /* Tambahkan ini */
+  left: 20px; /* Tambahkan ini untuk menggeser gambar ke kiri */
+}
+
+.music-card .info {
+  flex: 1;
+}
+
+.music-card audio {
+  width: 100%;
+  margin-top: 5px;
+}
+
+
+

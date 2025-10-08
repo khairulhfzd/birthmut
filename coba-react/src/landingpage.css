@@ -1,0 +1,86 @@
+/* Reset basic */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdf6f9;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #fff6f8;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
+}
+
+.envelope-image-wrapper {
+  width: 280px;
+  height: auto;
+}
+
+.envelope-image {
+  width: 100%;
+  height: auto;
+}
+
+.letter-image {
+  position: absolute;
+  top: 30%; /* Atau nilai lain yang lebih kecil dari 50% */
+  left: 42%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  z-index: 100;
+}
+
+
+/* Text */
+.landing-text {
+  font-size: 22px;
+  font-style: italic;
+  color: #4a4a4a;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.landing-btn {
+  background: #ff4e8d;
+  color: white;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 78, 141, 0.4);
+  transition: all 0.3s ease;
+}
+
+.landing-btn:hover {
+  background: #ff1e6d;
+}
+
+
+
+/* Floating animation for envelope */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.landing-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #333;
+}
